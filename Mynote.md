@@ -1,0 +1,1 @@
+CTRL+Shift+P ==> show all commands vs code.
