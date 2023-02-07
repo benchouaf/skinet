@@ -2,6 +2,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Core.Interfaces;
+using Infrastructure;
 using Infrastructure.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
@@ -24,6 +26,8 @@ namespace API
         public void ConfigureServices(IServiceCollection services)
         {
 
+              
+            services.AddScoped<IProductRepository, ProductRepository>(); 
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
